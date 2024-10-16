@@ -4,13 +4,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap');
 
-/* colors */
+
+
+/* ################################################################################################# */
+/* ##################        #######       #######  ###############       ######################################### */
+/* ##################  ############  #####  ######  ##############  #####  ############################## */
+/* ##################  ###########  #######  #####  #############  #######  ################################### */
+/* ##################  ############  #####  ######  ##############  #####  ############################## */
+/* ##################        #######       #######        #########       ###################################### */
+/* ################################################################################################# */
+
 :root {
     --color-background: #ecedeb;
     --color-hueso: #ecedeb;
+    --color-verde: #365d7e;
     --color-gris: #cecace;
     --color-cielo: #ecedeb;
+
     --color-facebook: #ecedeb;
     --color-tiktok: #ecedeb;
     --color-instagram: #ecedeb;
@@ -32,14 +44,33 @@
 
 
 body{
-    background-color: var(--color-background);
+    /* background-color: var(--color-background); */
+    background: -webkit-linear-gradient(180deg,#ecedeb,#ffbac9); 
+    background: linear-gradient(180deg,#ecedeb,#ffbac9);
+
 }
+.bg-hueso{background-color: var(--color-hueso);}
+.bg-verde{background-color: var(--color-verde);}
+
+.bg-whatsapp {color: #2ecc71;}
+.bg-facebook {color: #0165E1;}
+.bg-instagram {color: #E1306C;}
+.bg-tiktok {color: #7b9ce3;}
+
+.text-verde{color: var(--color-verde);}
+.text-whatsapp {color: #2ecc71;}
+.text-facebook {color: #0165E1;}
+.text-instagram {color: #E1306C;}
+.text-tiktok {color: #7b9ce3;}
+
+
 
 .color-hueso {background-color: var(--color-hueso);}
 
 .color-gris{background-color: var(--color-gris)}
 
 .color-cielo {background-color: #7b9ce3;}
+
 
 .color-facebook {color: #0165E1;}
 .color-tiktok {background-color: #7b9ce3;}
@@ -50,22 +81,112 @@ body{
 
 
 
-.whatsapp {
-    color: #2ecc71;
+
+
+
+
+/* ################################################################################################# */
+/* ##################    ######    #####          #####    ####  #####  #####  ##################### */
+/* ##################  #  ####  #  #####  #############  #  ###  #####  #####  ##################### */
+/* ##################  ##  ##  ##  #####      #########  ##  ##  #####  #####  ##################### */
+/* ##################  ###    ###  #####  #############  ###  #  #####  #####  ##################### */
+/* ##################  ##########  #####          #####  ####    #####         ##################### */
+/* ################################################################################################# */
+.bg-header{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+   
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    /* background-color: var(--color-hueso); */
 }
-.facebook {
-    color: #0165E1;
+
+
+.close{
+    visibility: collapse;
+    height: 0;
+    margin-left: -400px;
+    transition: all .5s ease;
 }
-.instagram {
-    color: #E1306C;
+.open{
+    visibility: visible;
+    transition: all .6s ease;
 }
-.tiktok {
-    color: #7b9ce3;
+.setopentrue, .setopenfalse{
+    padding: 1em;
 }
+.setopentrue{
+    color: #f00;
+}
+.setopenfalse{
+    color: #00f;
+}
+
+
+.menu {
+    color: var(--color-background);
+    background-image: linear-gradient(30deg , #0048bd, #44a7fd);
+    border-top-right-radius: 80px;
+}
+  
+.menu a {
+    font-size: 14px;
+    color: #fff;
+    display: block;
+    padding: 12px;
+    padding-left: 30px;
+    text-decoration: none;
+    -webkit-tap-highlight-color:transparent;
+}
+  
+aside a:hover {
+    color: #3f5efb;
+    background: #fff;
+    outline: none;
+    position: relative;
+    background-color: var(--color-background);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+  
+aside a i {
+    margin-right: 5px;
+}
+  
+aside a:hover::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: 100%;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    border-bottom-right-radius: 18px;
+    box-shadow: 0 20px 0 0 #fff;
+}
+  
+aside a:hover::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    top: 38px;
+    right: 0;
+    height: 35px;
+    width: 35px;
+    border-top-right-radius: 18px;
+    box-shadow: 0 -20px 0 0 #fff;
+}
+  
+  
+
+
+/* Menu MD */
 
 .btn-menu{
     text-transform: uppercase;
-    font-family: "Bebas Neue";
+    font-family: "Qwitcher";
     font-weight: 400;
     font-style: normal;
     padding: 2px;
@@ -74,10 +195,14 @@ body{
     backdrop-filter: blur(10px);
 }
 
+.btn-menu a {
+    color: #FFFFFF;
+}
 
-
-
-
+.btn-menu a:hover{
+    color: #ffbac9;
+}
+/* 
 .header-wave{
     position: absolute;
     z-index: -1;
@@ -86,14 +211,17 @@ body{
     height: 450px;
     width: 100%;
     overflow: hidden;
-    
-    
+    background-color: var(--color-hueso);
 }
+.header-wave-path{
+    fill: var(--color-verde);
+    fill-opacity: 1;
+} */
 
 .slogan{
-    /* font-family: "Qwitcher Grypen", cursive; */
-    font-family: "Caveat", cursive;
-    /* font-family: "Protest Strike", sans-serif; */
+    font-family: "Merienda", cursive;
+    font-weight: bold;
+    text-align: end;
 }
 
 
@@ -101,7 +229,7 @@ body{
     position: relative;
     margin-top: 0px;
     z-index: -2;
- }
+}
  
  .imagen-header{
      background-image: url(images/podologia-1.jpg);
@@ -110,155 +238,149 @@ body{
      background-size: cover;
      height: 300px;
      opacity: 0.8;
- }
+}
 
 
 /* .main{
-    background: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        from(#0f0140e6),
-        to(rgba(255, 214, 117, 0.9))
-        );
+    background: -webkit-linear-gradient(180deg,#ecedeb,#ffbac9); 
+    background: linear-gradient(180deg,#ecedeb,#ffbac9);
+} */
 
-    background: linear-gradient(to top, #0f0140e6, rgba(255, 214, 117, 0.9));
+
+
+/* ################################################################################################# */
+/* ###########       #####          #####        #######  ########  #####  ############# */
+/* ##########  ###########  #############  #####  #######  ######  ######  ############## */
+/* ##########       ######      #########  ###   #########  ####  #######  ############# */
+/* ################  #####  #############  ####  ##########  ##  ########  ################### */
+/* ##########        #####          #####  #####  ##########    #########  #################### */
+/* ################################################################################################# */
+
+.servicios > .bg {
+    background: url('./images/fondo-enfermeria.jpg')
+    center top no-repeat #65203b;
+    background-size: cover;
+    display: block;
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+    
+.bg-texture {
+    background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(#0f0140e6),
+    to(rgba(237, 202, 216, 0.9))
+    );
+    background: linear-gradient(to top, #0f0140e6, rgba(237, 202, 216, 0.9));
     background-size: cover;
     position: absolute;
     z-index: 0;
     top: 0;
     left: 0;
-} */
+}
+  
+.carousel {
+    width: 100%;
+    padding: 30px;
+    padding-top: 80px;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
-/* ########################################## SERVICIOS ######################################################### */
+.carousel__container {
+    margin: 100px 0px;
+    padding-bottom: 10px;
+    display: inline-block;
+    
+}
 
-.servicios{
+.categories__title {
+    color: rgb(77, 55, 102);
+    /* position: absolute; */
+    /* font-weight: 700; */
+}
+
+.carousel-item {
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    background-color: #95bcd6;
+    overflow: hidden;
+    margin: 10px;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-transition: 1000ms all;
+    transition: 1000ms all;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
     position: relative;
 }
-    .servicios > .background {
-        background: url('https://images.pexels.com/photos/1095624/pexels-photo-1095624.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260')
-        center top no-repeat #252746;
-        background-size: cover;
-        display: block;
-        position: absolute;
-        z-index: 0;
-        top: 0;
-        left: 0;
-    }
-    
-    .background-texture {
-        background: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        from(#0f0140e6),
-        to(rgba(255, 214, 117, 0.9))
-        );
-        background: linear-gradient(to top, #0f0140e6, rgba(255, 214, 117, 0.9));
-        background-size: cover;
-        position: absolute;
-        z-index: 0;
-        top: 0;
-        left: 0;
-    }
-  
-    .carousel {
-        width: 100%;
-        padding: 30px;
-        padding-top: 80px;
-        position: relative;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-    }
-    
-    .carousel__container {
-        margin: 100px 0px;
-        padding-bottom: 10px;
-        display: inline-block;
-    }
-  
-    .categories__title {
-        color: rgb(77, 55, 102);
-        position: absolute;
-    }
-  
-    .carousel-item {
-        width: 200px;
-        height: 250px;
-        border-radius: 20px;
-        background-color: #95bcd6;
-        overflow: hidden;
-        margin: 10px;
-        display: inline-block;
-        cursor: pointer;
-        -webkit-transition: 1000ms all;
-        transition: 1000ms all;
-        -webkit-transform-origin: center left;
-        transform-origin: center left;
-        position: relative;
-    }
-  
-    .carousel-item:hover ~ .carousel-item {
-        -webkit-transform: translate3d(100px, 0, 0);
-        transform: translate3d(100px, 0, 0);
-    }
-  
-    .carousel__container:hover .carousel-item {
-        opacity: 0.3;
-    }
-    
-    .carousel__container:hover .carousel-item:hover {
-        -webkit-transform: scale(1.5);
-        transform: scale(1.5);
-        opacity: 1;
-    }
-    
-    .carousel-item__img {
-        width: 200px;
-        height: 250px;
-        -o-object-fit: cover;
-        object-fit: cover;
-    }
-    
-    .carousel-item__details {
-        background: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        from(rgba(0, 0, 0, 0.9)),
-        to(rgba(0, 0, 0, 0))
-        );
-        background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.9) 0%,
-        rgba(0, 0, 0, 0) 100%
-        );
-        font-size: 10px;
-        opacity: 0;
-        -webkit-transition: 450ms opacity;
-        transition: 450ms opacity;
-        padding: 10px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    }
-    
-    .carousel-item__details:hover {
-        opacity: 1;
-    }
-  
-    .carousel-item__details span {
-        font-size: 0.9rem;
-        padding: 2px;
-        border: rgba(255, 255, 255, 0) solid 1px;
-        background: rgba(255, 255, 255, 0.1); /* Fondo blanco con 50% de transparencia */
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        backdrop-filter: blur(0px);
 
-    }
+.carousel-item:hover ~ .carousel-item {
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0);
+}
+
+.carousel__container:hover .carousel-item {
+    opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+.carousel-item__img {
+    width: 200px;
+    height: 250px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.carousel-item__details {
+    background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(rgba(0, 0, 0, 0.9)),
+    to(rgba(0, 0, 0, 0))
+    );
+    background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+    );
+    font-size: 10px;
+    opacity: 0;
+    -webkit-transition: 450ms opacity;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.carousel-item__details:hover {
+    opacity: 1;
+}
+
+.carousel-item__details span {
+    font-size: 0.9rem;
+    padding: 2px;
+    border: rgba(255, 255, 255, 0) solid 1px;
+    background: rgba(255, 255, 255, 0.5); /* Fondo blanco con 50% de transparencia */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+
+}
 
 
   
@@ -269,26 +391,27 @@ body{
     position: relative;
     margin-top: 187px;
 }
-    .agendar > .agendar-fondo{
-        height: 730px;
-        overflow: hidden;
-        z-index: -2;
-    }
-    .agendar-path{
-        stroke: none;
-        fill: #233364;
-    }
+.agendar-fondo{
 
-    .agendar-contenido{
-        position: absolute;
-        top: 20%;
-        left: 20%;
-        
-    }
-    .agendar-cita{
-        
-        background: transparent;
-    }
+    overflow: hidden;
+    z-index: -2;
+}
+.agendar-path{
+    stroke: none;
+    fill: #233364;
+    overflow: hidden;
+}
+
+.agendar-contenido{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    
+}
+.agendar-cita{
+    
+    background: transparent;
+}
 
 
 .tarjeta {
@@ -522,12 +645,21 @@ body{
   } */
   
 
+.about{
+    background-color: #0048bd;
+    background: url('./images/fondo-waves.jpg')
+    center top no-repeat #252746;
+    background-size: cover;
+    display: block;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+}
 
 
 
-
-
-  .card-datos {
+.card-datos {
     position: relative;
     width: 300px;
     height: 400px;
@@ -537,7 +669,7 @@ body{
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
-  }
+}
   
   .img-bx {
     position: absolute;
@@ -579,14 +711,15 @@ body{
   }
   
   .content .detail h2 {
-    color: #444;
+    padding-top: 10px;
+    color: #FFF;
     font-size: 1.6em;
     font-weight: bolder;
   }
   
   .content .detail h2 span {
     font-size: 0.7em;
-    color: #03a9f4;
+    color: #c9e0eb;
     font-weight: bold;
   }
   
@@ -610,13 +743,108 @@ body{
     border-radius: 50%;
     background: transparent;
     font-size: 1.5em;
-    color: #444;
+    color: #bdbdbd;
     text-decoration: none;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     transition: 0.5s;
   }
   
   .sci li a:hover {
-    background: #03a9f4;
+    /* background: #03a9f4; */
+    background: #ffbac9;
     color: #fff;
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* ################################################################################################# */
+/* ##################        ######       ############################################################### */
+/* ##################  ############  ####  ################################################## */
+/* ##################    ##########  ##   ####################################################### */
+/* ##################  ############  ####  ####################################################### */
+/* ##################  ############  #####  ##################################################### */
+/* ################################################################################################# */
+
+
+/* .footer{
+    background: -webkit-linear-gradient(180deg,#ffbac9,#ffbac9);  
+    background: linear-gradient(180deg,#ffbac9,#ffbac9); 
+} */
+
+
+  
+.open-modal {
+    font-weight: bold;
+    background: steelblue;
+    color: white;
+    padding: 0.75rem 1.75rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  
+  
+  /* MODAL
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.382);
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.35s ease-in;
+  }
+  
+  .modal.is-visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .modal-dialog {
+    position: relative;
+    max-width: 800px;
+    max-height: 80vh;
+    border-radius: 5px;
+    background: white;
+    overflow: auto;
+    cursor: default;
+  }
+  
+ 
+  
+  
+  
+  /* ANIMATIONS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  [data-animation] .modal-dialog {
+    opacity: 0;
+    transition: all 0.5s var(--bounceEasing);
+  }
+  
+  [data-animation].is-visible .modal-dialog {
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+  
+  [data-animation="slideInOutLeft"] .modal-dialog {
+    transform: translateX(-100%);
+  }
+  
+  [data-animation="slideInOutLeft"].is-visible .modal-dialog {
+    transform: none;
   }
