@@ -11,87 +11,353 @@
     <script src="https://kit.fontawesome.com/570233c363.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    
 
-    <section class="header m-0">
-        <nav class="border-gray-200 dark:bg-gray-900">
-            <div class="flex flex-wrap justify-between m-0">
-            <div class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="images/icono-sin-fondo.png" class="h-36" alt="Podo-Step Logo" />
-                <span class="self-center text-3xl font-semibold whitespace-nowrap dark:text-white">Podo-Step</span>
+    <!-- <section class="header-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path class="header-wave-path"
+            d="M0,256L60,266.7C120,277,240,299,360,261.3C480,224,600,128,720,96C840,64,960,96,1080,101.3C1200,107,1320,85,1380,74.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
+        </path>
+        </svg>
+        
+    </section> -->
+    <header>
+        <section class="bg-header">
+            <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
+                        <stop stop-color="#fc748c" offset="0%"></stop>
+                        <stop stop-color="#FFC0CB" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+                <path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,49L120,89.8C240,131,480,212,720,212.3C960,212,1200,131,1440,130.7C1680,131,1920,212,2160,228.7C2400,245,2640,196,2880,212.3C3120,229,3360,310,3600,318.5C3840,327,4080,261,4320,236.8C4560,212,4800,229,5040,269.5C5280,310,5520,376,5760,408.3C6000,441,6240,441,6480,416.5C6720,392,6960,343,7200,343C7440,343,7680,392,7920,383.8C8160,376,8400,310,8640,285.8C8880,261,9120,278,9360,285.8C9600,294,9840,294,10080,318.5C10320,343,10560,392,10800,392C11040,392,11280,343,11520,326.7C11760,310,12000,327,12240,318.5C12480,310,12720,278,12960,294C13200,310,13440,376,13680,359.3C13920,343,14160,245,14400,236.8C14640,229,14880,310,15120,359.3C15360,408,15600,425,15840,383.8C16080,343,16320,245,16560,187.8C16800,131,17040,114,17160,106.2L17280,98L17280,490L17160,490C17040,490,16800,490,16560,490C16320,490,16080,490,15840,490C15600,490,15360,490,15120,490C14880,490,14640,490,14400,490C14160,490,13920,490,13680,490C13440,490,13200,490,12960,490C12720,490,12480,490,12240,490C12000,490,11760,490,11520,490C11280,490,11040,490,10800,490C10560,490,10320,490,10080,490C9840,490,9600,490,9360,490C9120,490,8880,490,8640,490C8400,490,8160,490,7920,490C7680,490,7440,490,7200,490C6960,490,6720,490,6480,490C6240,490,6000,490,5760,490C5520,490,5280,490,5040,490C4800,490,4560,490,4320,490C4080,490,3840,490,3600,490C3360,490,3120,490,2880,490C2640,490,2400,490,2160,490C1920,490,1680,490,1440,490C1200,490,960,490,720,490C480,490,240,490,120,490L0,490Z"></path>
+                <defs>
+                    <linearGradient id="sw-gradient-1" x1="0" x2="0" y1="1" y2="0">
+                        <stop stop-color="#fc748c" offset="0%"></stop>
+                        <stop stop-color="#FFC0CB" offset="100%"></stop>
+                    </linearGradient></defs>
+                <path style="transform:translate(0, 50px); opacity:0.9" fill="url(#sw-gradient-1)" d="M0,0L120,65.3C240,131,480,261,720,294C960,327,1200,261,1440,220.5C1680,180,1920,163,2160,204.2C2400,245,2640,343,2880,351.2C3120,359,3360,278,3600,204.2C3840,131,4080,65,4320,40.8C4560,16,4800,33,5040,32.7C5280,33,5520,16,5760,73.5C6000,131,6240,261,6480,310.3C6720,359,6960,327,7200,334.8C7440,343,7680,392,7920,359.3C8160,327,8400,212,8640,187.8C8880,163,9120,229,9360,285.8C9600,343,9840,392,10080,408.3C10320,425,10560,408,10800,400.2C11040,392,11280,392,11520,400.2C11760,408,12000,425,12240,424.7C12480,425,12720,408,12960,351.2C13200,294,13440,196,13680,155.2C13920,114,14160,131,14400,138.8C14640,147,14880,147,15120,130.7C15360,114,15600,82,15840,73.5C16080,65,16320,82,16560,89.8C16800,98,17040,98,17160,98L17280,98L17280,490L17160,490C17040,490,16800,490,16560,490C16320,490,16080,490,15840,490C15600,490,15360,490,15120,490C14880,490,14640,490,14400,490C14160,490,13920,490,13680,490C13440,490,13200,490,12960,490C12720,490,12480,490,12240,490C12000,490,11760,490,11520,490C11280,490,11040,490,10800,490C10560,490,10320,490,10080,490C9840,490,9600,490,9360,490C9120,490,8880,490,8640,490C8400,490,8160,490,7920,490C7680,490,7440,490,7200,490C6960,490,6720,490,6480,490C6240,490,6000,490,5760,490C5520,490,5280,490,5040,490C4800,490,4560,490,4320,490C4080,490,3840,490,3600,490C3360,490,3120,490,2880,490C2640,490,2400,490,2160,490C1920,490,1680,490,1440,490C1200,490,960,490,720,490C480,490,240,490,120,490L0,490Z"></path>
+                <defs>
+                    <linearGradient id="sw-gradient-2" x1="0" x2="0" y1="1" y2="0">
+                        <stop stop-color="#FFB6C1" offset="0%"></stop>
+                        <stop stop-color="#FFC0CB" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+                <path style="transform:translate(0, 100px); opacity:0.8" fill="url(#sw-gradient-2)" d="M0,343L120,318.5C240,294,480,245,720,228.7C960,212,1200,229,1440,196C1680,163,1920,82,2160,57.2C2400,33,2640,65,2880,130.7C3120,196,3360,294,3600,285.8C3840,278,4080,163,4320,130.7C4560,98,4800,147,5040,147C5280,147,5520,98,5760,122.5C6000,147,6240,245,6480,253.2C6720,261,6960,180,7200,147C7440,114,7680,131,7920,122.5C8160,114,8400,82,8640,122.5C8880,163,9120,278,9360,285.8C9600,294,9840,196,10080,147C10320,98,10560,98,10800,130.7C11040,163,11280,229,11520,212.3C11760,196,12000,98,12240,89.8C12480,82,12720,163,12960,236.8C13200,310,13440,376,13680,375.7C13920,376,14160,310,14400,310.3C14640,310,14880,376,15120,400.2C15360,425,15600,408,15840,359.3C16080,310,16320,229,16560,163.3C16800,98,17040,49,17160,24.5L17280,0L17280,490L17160,490C17040,490,16800,490,16560,490C16320,490,16080,490,15840,490C15600,490,15360,490,15120,490C14880,490,14640,490,14400,490C14160,490,13920,490,13680,490C13440,490,13200,490,12960,490C12720,490,12480,490,12240,490C12000,490,11760,490,11520,490C11280,490,11040,490,10800,490C10560,490,10320,490,10080,490C9840,490,9600,490,9360,490C9120,490,8880,490,8640,490C8400,490,8160,490,7920,490C7680,490,7440,490,7200,490C6960,490,6720,490,6480,490C6240,490,6000,490,5760,490C5520,490,5280,490,5040,490C4800,490,4560,490,4320,490C4080,490,3840,490,3600,490C3360,490,3120,490,2880,490C2640,490,2400,490,2160,490C1920,490,1680,490,1440,490C1200,490,960,490,720,490C480,490,240,490,120,490L0,490Z"></path>
+                <defs>
+                    <linearGradient id="sw-gradient-3" x1="0" x2="0" y1="1" y2="0">
+                        <stop stop-color="#fc748c" offset="0%"></stop>
+                        <stop stop-color="#FFB6C1" offset="100%"></stop>
+                    </linearGradient>
+                </defs>
+                <path style="transform:translate(0, 150px); opacity:0.7" fill="url(#sw-gradient-3)" d="M0,392L120,343C240,294,480,196,720,204.2C960,212,1200,327,1440,318.5C1680,310,1920,180,2160,122.5C2400,65,2640,82,2880,130.7C3120,180,3360,261,3600,245C3840,229,4080,114,4320,57.2C4560,0,4800,0,5040,0C5280,0,5520,0,5760,32.7C6000,65,6240,131,6480,204.2C6720,278,6960,359,7200,375.7C7440,392,7680,343,7920,343C8160,343,8400,392,8640,408.3C8880,425,9120,408,9360,408.3C9600,408,9840,425,10080,416.5C10320,408,10560,376,10800,326.7C11040,278,11280,212,11520,228.7C11760,245,12000,343,12240,383.8C12480,425,12720,408,12960,351.2C13200,294,13440,196,13680,196C13920,196,14160,294,14400,334.8C14640,376,14880,359,15120,302.2C15360,245,15600,147,15840,130.7C16080,114,16320,180,16560,245C16800,310,17040,376,17160,408.3L17280,441L17280,490L17160,490C17040,490,16800,490,16560,490C16320,490,16080,490,15840,490C15600,490,15360,490,15120,490C14880,490,14640,490,14400,490C14160,490,13920,490,13680,490C13440,490,13200,490,12960,490C12720,490,12480,490,12240,490C12000,490,11760,490,11520,490C11280,490,11040,490,10800,490C10560,490,10320,490,10080,490C9840,490,9600,490,9360,490C9120,490,8880,490,8640,490C8400,490,8160,490,7920,490C7680,490,7440,490,7200,490C6960,490,6720,490,6480,490C6240,490,6000,490,5760,490C5520,490,5280,490,5040,490C4800,490,4560,490,4320,490C4080,490,3840,490,3600,490C3360,490,3120,490,2880,490C2640,490,2400,490,2160,490C1920,490,1680,490,1440,490C1200,490,960,490,720,490C480,490,240,490,120,490L0,490Z"></path>
+            </svg>
+        </section>
+
+        <section class="header">
+            <nav class="border-gray-200 dark:bg-gray-900">
+                <div class="flex flex-wrap justify-between m-0">
+                    <div class="mt-10 md:m-0 flex items-center space-x-3 rtl:space-x-reverse" >
+                        <div class="" >
+                            <img src="images/icono-sin-fondo-nombre.png" class="h-36 md:h-64" alt="Podo-Step Logo" />
+                            <!-- <span class="self-center text-3xl md:text-5xl font-semibold whitespace-nowrap text-verde md:text-white dark:text-white">Podo-Step</span> -->
+                            
+                        </div>
+                    </div>
+                    
+                    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+
+                        <div id="setopen" class="setopentrue flex justify-end ">
+                            <svg id="svgicon1" class="block delay-700 transition duration-700 ease-in-out w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 17 14">
+                                <path fill="#3d5a69" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 4h14M1 12h10M1"/>
+                            </svg>
+                            <svg id="svgicon2" class="hidden delay-700 transition duration-700 ease-in-out w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18 17.94 6M18 18 6.06 6"/>
+                            </svg>
+                            
+                        </div>
+                    </button>
+        
+                    <div class="hidden w-full md:m-4 mt-2 mr-3 md:block md:w-auto" id="navbar-default">
+                        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                            <li class="btn-menu">
+                                <a href="#about" class="block text-xl md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Acerca de mi</a>
+                            </li>
+                            <li class="btn-menu">
+                                <a href="#servicios" class="block text-xl py-2 px-3  rounded md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Servicios</a>
+                            </li>
+                            <li class="btn-menu">
+                                <a href="#precios" class="block text-xl py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Precios</a>
+                            </li>
+                            <li class="btn-menu">
+                                <a href="#contacto" class="block text-xl py-2 px-3 rounded md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contacto</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+             
+        </section>
+
+        <aside id="menu" class="menu close h-screen fixed top-0 pl-5 w-60 z-10">
+            <p class="m-0 py-10 font-bold text-2xl"> Menu </p>
+            <a href="#about">
+                <i class="fa fa-user-o" aria-hidden="true"></i>
+                Acerca de
+            </a>
+            <a href="#">
+                <i class="fa fa-laptop" aria-hidden="true"></i>
+                Contacto
+            </a>
+            <a href="#">
+                <i class="fa fa-clone" aria-hidden="true"></i>
+                Tratamientos
+            </a>
+            <a href="#">
+                <i class="fa fa-star-o" aria-hidden="true"></i>
+                Información
+            </a>
+            <a href="#">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                Trash
+            </a>
+        </aside>
+    </header>
+
+
+    <main class="main ">
+        <section class="mb-32 mr-6">
+            <div class="slogan md:text-4xl">
+                "cuidando tus pies... siguiendo tus pasos"
             </div>
-            
-            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-                </svg>
-            </button>
+        </section>
 
-            <div class="hidden w-full md:m-4 mt-2 mr-3 md:block md:w-auto" id="navbar-default">
-                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                    <li class="btn-menu">
-                        <a href="#about" class="block text-xl text-white hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Acerca de mi</a>
+
+        <section class="mx-auto max-w-screen-xl">
+            <div class="inline-flex items-center justify-center w-full mb-2">
+                <hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded dark:bg-gray-700">
+                <div class="absolute px-4 -translate-x-1/2 bg-hueso left-1/2 dark:bg-gray-900 ">
+                    Tratamientos
+                </div>
+            </div>
+
+            <div class="ml-4 md:ml-0 lg:ml-0 md:flex md:justify-between lg:flex lg:justify-between">
+                
+                <ul class="max-w-md md:max-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                    <div class="my-5 text-center">Podología</div>
+                    <li class="pb-3 sm:pb-4">
+                        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                            <div class="flex-shrink-1">
+                                <img class="w-8 h-8 rounded-full" src="/images/quiropodia.jpg" alt="Neil image">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Quiropodia
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Corte correcto de uñas y diagnostico de patologías
+                                </p>
+                            </div>
+                            <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                $300
+                            </div>
+                        </div>
                     </li>
-                    <li class="btn-menu">
-                        <a href="#servicios" class="block text-xl py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Servicios</a>
+                    <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                            <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full" src="/images/heloma-plantar.jpg" alt="Neil image">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Heloma plantar
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Eliminación de celulas muertas(callos)
+                                </p>
+                            </div>
+                            <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                $280
+                            </div>
+                        </div>
                     </li>
-                    <li class="btn-menu">
-                        <a href="#precios" class="block text-xl py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Precios</a>
+                    <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                            <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full" src="/images/onicomicosis.jpg" alt="Neil image">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Onicomicosis
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Infección micotica de la lámina ungueal (hongo)
+                                </p>
+                            </div>
+                            <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                $300
+                            </div>
+                        </div>
                     </li>
-                    <li class="btn-menu">
-                        <a href="#contacto" class="block text-xl py-2 px-3 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-pink-700 md:p-0 dark:text-white md:dark:hover:text-pink-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contacto</a>
+                    <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                            <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full" src="/images/onicocriptosis.jpg" alt="Neil image">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Onicocriptosis
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Afección ungueal (uña encarnada)
+                                </p>
+                            </div>
+                            <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                $400
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pt-3 pb-0 sm:pt-4">
+                        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                            <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full" src="/images/onicocriptosis.jpg" alt="Neil image">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Onicogrifosis
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Engrosamiento anormal de uña
+                                </p>
+                            </div>
+                            <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                                $350
+                            </div>
+                        </div>
                     </li>
                 </ul>
-            </div>
-            </div>
-        </nav>
-         <section class="header-wave">
-            
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                <path 
-                fill="#cecace" fill-opacity="1" 
-                d="M0,256L60,266.7C120,277,240,299,360,261.3C480,224,600,128,720,96C840,64,960,96,1080,101.3C1200,107,1320,85,1380,74.7L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z">
-            </path>
-            </svg>
-            
-        </section>
-    </section>
 
+                <ul class="mt-32 md:mt-0 max-w-md md:max-w-full divide-y divide-gray-200 dark:divide-gray-700">
+                    <div class="my-5 text-center">Enfermería</div>
+                    <li class="pb-3 sm:pb-4">
+                        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                            <div class="flex-shrink-1">
+                                <img class="w-8 h-8 rounded-full" src="/images/quiropodia.jpg" alt="Neil image">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Curaciones y atención a pie diabético
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Ulceras, llagas
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                            <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full" src="/images/heloma-plantar.jpg" alt="Neil image">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Colocación y retiro de sonda vesical
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Descripción
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                            <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full" src="/images/onicomicosis.jpg" alt="Neil image">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Aplicación de medicamentos
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Descripción
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="py-3 sm:py-4">
+                        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                            <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full" src="/images/onicocriptosis.jpg" alt="Neil image">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Cambio de colostomía
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Descripción
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pt-3 pb-0 sm:pt-4">
+                        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                            <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full" src="/images/onicocriptosis.jpg" alt="Neil image">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Aplicación de sueros
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Descripción
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="pt-3 pb-0 sm:pt-4">
+                        <div class="flex items-center space-x-4 rtl:space-x-reverse">
+                            <div class="flex-shrink-0">
+                                <img class="w-8 h-8 rounded-full" src="/images/onicocriptosis.jpg" alt="Neil image">
+                            </div>
+                            <div class="flex-1 min-w-0">
+                                <p class="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                    Retiro de puntos
+                                </p>
+                                <p class="text-sm text-gray-500 truncate dark:text-gray-400">
+                                    Descripción
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
 
-    <section class="main ">
-
-        <section class="mb-32 mr-6">
-            <div class="slogan text-4xl font-bold text-end">
-                "cuidando tus pies siguiendo tus pasos"
-            </div>
-            <div class="mt-8 text-6xl font-bold text-center">
-                Servicios de podología 
             </div>
         </section>
 
 
 
         
-        <section class="servicios">
-            <div class="background md:h-screen w-full"></div>
-            <div class="background-texture md:h-screen w-full"></div>
+        <section class="servicios relative md:mt-24">
+            <div class="bg md:h-screen w-full absolute"></div>
+            <div class="bg-texture md:h-screen w-full"></div>
 
-            <section class="carousel p-7 flex">
+            <section class="carousel p-7 flex ">
                 <h2 class="categories__title text-3xl font-semibold">Servicios</h2>
-                <div class="carousel__container">
+                <div class="carousel__container space-y-14 md:space-y-1">
                     <div class="carousel-item">
                     <img
                         class="carousel-item__img"
                         src="https://images.pexels.com/photos/17056219/pexels-photo-17056219/free-photo-of-pie-belleza-pedicura-haciendo.jpeg"
-                        alt="people"
+                        alt="quiropodia"
                     />
                     <div class="carousel-item__details">
                         <div class="controls flex justify-end space-x-2">
                             <a href="https://wa.me/524611794520/?text=Buen+dia%2C+me+gustaria+agendar+una+cita+para+servicio+de+Quiropodia">
-                                <span class="fa-brands fa-whatsapp whatsapp"></span>   
+                                <span class="fa-brands fa-whatsapp bg-whatsapp"></span>   
                             </a>
                             <a href="#" >
-                                <span class="fa-brands fa-facebook facebook"></span>    
+                                <span class="fa-brands fa-facebook bg-facebook"></span>    
                             </a>
                         </div>
                         <h5 class="carousel-item__details--title text-white mt-44">Corte correcto de uñas</h5>
@@ -108,10 +374,10 @@
                     <div class="carousel-item__details">
                         <div class="controls flex justify-end space-x-2">
                             <a href="https://wa.me/524611794520/?text=Buen+dia%2C+me+gustaria+agendar+una+cita+para+servicio+de+Haloma+plantar">
-                                <span class="fa-brands fa-whatsapp whatsapp"></span>   
+                                <span class="fa-brands fa-whatsapp bg-whatsapp"></span>   
                             </a>
                             <a href="#" >
-                                <span class="fa-brands fa-facebook facebook"></span>    
+                                <span class="fa-brands fa-facebook bg-facebook"></span>    
                             </a>
                         </div>
                         <h5 class="carousel-item__details--title text-white mt-44">Deslaminacion de callos</h5>
@@ -127,10 +393,10 @@
                     <div class="carousel-item__details">
                         <div class="controls flex justify-end space-x-2">
                         <a href="https://wa.me/524611794520/?text=Buen+dia%2C+me+gustaria+agendar+una+cita+para+servicio+de+limpieza">
-                                <span class="fa-brands fa-whatsapp whatsapp"></span>   
+                                <span class="fa-brands fa-whatsapp bg-whatsapp"></span>   
                             </a>
                             <a href="#" >
-                                <span class="fa-brands fa-facebook facebook"></span>    
+                                <span class="fa-brands fa-facebook bg-facebook"></span>    
                             </a>
                         </div>
                         <h5 class="carousel-item__details--title text-white mt-44">Limpieza de canales ungueales</h5>
@@ -146,10 +412,10 @@
                     <div class="carousel-item__details">
                         <div class="controls flex justify-end space-x-2">
                         <a href="https://wa.me/524611794520/?text=Buen+dia%2C+me+gustaria+agendar+una+cita+para+servicio+de+onicomicosis">
-                                <span class="fa-brands fa-whatsapp whatsapp"></span>   
+                                <span class="fa-brands fa-whatsapp bg-whatsapp"></span>   
                             </a>
                             <a href="#" >
-                                <span class="fa-brands fa-facebook facebook"></span>    
+                                <span class="fa-brands fa-facebook bg-facebook"></span>    
                             </a>
                         </div>
                         <h5 class="carousel-item__details--title text-white mt-44">Onicomicosis</h5>
@@ -165,10 +431,10 @@
                     <div class="carousel-item__details">
                         <div class="controls flex justify-end space-x-2">
                         <a href="https://wa.me/524611794520/?text=Buen+dia%2C+me+gustaria+agendar+una+cita+para+servicio+de+Onicocriptosis">
-                                <span class="fa-brands fa-whatsapp whatsapp"></span>   
+                                <span class="fa-brands fa-whatsapp bg-whatsapp"></span>   
                             </a>
                             <a href="#" >
-                                <span class="fa-brands fa-facebook facebook"></span>    
+                                <span class="fa-brands fa-facebook bg-facebook"></span>    
                             </a>
                         </div>
                         <h5 class="carousel-item__details--title text-white mt-44">Onicocriptosis</h5>
@@ -184,10 +450,10 @@
                     <div class="carousel-item__details">
                         <div class="controls flex justify-end space-x-2">
                         <a href="https://wa.me/524611794520/?text=Buen+dia%2C+me+gustaria+agendar+una+cita+para+servicio+de+Onicogrifosis">
-                                <span class="fa-brands fa-whatsapp whatsapp"></span>   
+                                <span class="fa-brands fa-whatsapp bg-whatsapp"></span>   
                             </a>
                             <a href="#" >
-                                <span class="fa-brands fa-facebook facebook"></span>    
+                                <span class="fa-brands fa-facebook bg-facebook"></span>    
                             </a>
                         </div>
                         <h5 class="carousel-item__details--title text-white mt-44">Onicogrifosis</h5>
@@ -200,14 +466,71 @@
         </section>
 
 
+        
+
+        
 
 
 
+        <section id="about" class="about relative md:my-36 md:mt-96 mx-auto max-w-screen-xl  h-screen">
+            <section>
+                <!-- <section class="about-wave absolute h-screen">
+                    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                        <path class="agendar-path" d="M297.62,-85.12 C43.67,80.21 326.41,59.54 239.50,180.59 L-0.00,149.60 L-0.00,0.00 Z" >
+                        </path>
+                    </svg>
+                </section> -->
+
+                <div class="grid gap-6 p-4 md:gap-20 lg:gap-20 md:p-40 lg:p-40 md:flex lg:flex md:justify-center lg:justify-center ">
+                    <div class="flex justify-center">
+                        <div class="card-datos h-48 md:h-96">
+                            <div class="contenido p-2">
+                                <h2 class="text-white mt-4" >Agenda una cita con nosotros</h2>
+                                <p class="text-white">y manten tus pies en movimiento</p>
+                                <div class="flex justify-end mt-16 md:mt-64">
+                                    <a class="button-animate alternative" href="https://wa.me/524611794520/?text=Buen+dia%2C+me+gustaria+agendar+una+cita">
+                                        Agendar
+                                    </a>
+    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="card-datos h-96">
+                            <div class="img-bx">
+                              <img src="https://i.postimg.cc/dQ7zWbS5/img-4.jpg" alt="foto-perfil" />
+                            </div>
+                            <div class="content">
+                              <div class="detail">
+                                <h2 class="text-white">Julieta Robles<br /><span>Podóloga y enfermera</span></h2>
+                                <ul class="sci">
+                                  <li>
+                                    <a class="hover:text-white " href="https://www.facebook.com/profile.php?id=61566464470909&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                                  </li>
+                                  <li>
+                                    <a class="hover:text-white " href="https://www.instagram.com/podostepcelaya/?hl=es-es"><i class="fab fa-instagram"></i></a>
+                                  </li>
+                                  <li>
+                                    <a class="hover:text-white " href="https://www.tiktok.com/@podostepcelaya"><i class="fab fa-tiktok"></i></a>
+                                  </li>
+                                  <li>
+                                    <a class="hover:text-white " href="#"><i class="fab fa-youtube"></i></a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </section>
 
 
+        </section>
 
-        <section class="agendar">
-            <section class="agendar-fondo">
+        <!-- <section class="agendar">
+            <section class="agendar-fondo h-screen">
                 <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
                     <path class="agendar-path"
                     d="M297.62,-85.12 C43.67,80.21 326.41,59.54 239.50,180.59 L-0.00,149.60 L-0.00,0.00 Z" >
@@ -215,19 +538,22 @@
                 </svg>
             </section>
 
-            <section class="agendar-contenido">
-                <div class="flex justify-center space-x-36">
+            <section class="agendar-contenido ">
+                <div class="space-y-10 md:flex md:justify-center md:space-x-36">
 
-                    <div class="tarjeta">
+                    <section class="tarjeta">
                         <div class="contenido">
                             <h2 >Agenda una cita con nosotros</h2>
                             <p >y manten tus pies en movimiento</p>
                             <div class="flex justify-end mt-64">
-                                <button class="button-animate alternative">Agendar</button>
+                                <a class="button-animate alternative" href="https://wa.me/524611794520/?text=Buen+dia%2C+me+gustaria+agendar+una+cita">
+                                    Agendar
+                                </a>
+
                             </div>
                             
                         </div>
-                    </div>
+                    </section>
                     
                     <section class="flex justify-center" id="about">
                         <div class="card-datos">
@@ -260,136 +586,79 @@
                 </div>
             </section>
         </section>
-        
+         -->
 
 
 
 
 
         
-        <!-- <div class="tarjeta">
-            <div class="contenido">
-                <h2>Título de la Tarjeta</h2>
-                <p>Este es un ejemplo de una tarjeta con fondo transparente.</p>
-            </div>
-        </div> -->
 
         
+    </main>
 
 
-
-
-
-
-
-<!--         
-        <div>
-           
-
-            descuentos
-            <a href="https://flowbite.com/blocks/e-commerce/discount/">aqui</a>
-        </div>
-        <div>
-            testimonios
-            <a href="https://flowbite.com/blocks/marketing/testimonial/">aqui</a>
-        </div> -->
-
-
-
-
-        
-
-        <section class="flex justify-center my-48" id="about">
-            <div class="card-datos">
-                <div class="img-bx">
-                  <img src="https://i.postimg.cc/dQ7zWbS5/img-4.jpg" alt="img" />
-                </div>
-                <div class="content">
-                  <div class="detail">
-                    <h2>Julieta Robles<br /><span>Podologa y enfermera</span></h2>
-                    <ul class="sci">
-                      <li>
-                        <a href="https://www.facebook.com/profile.php?id=61566464470909&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
-                      </li>
-                      <li>
-                        <a href="https://www.instagram.com/podostepcelaya/?hl=es-es"><i class="fab fa-instagram"></i></a>
-                      </li>
-                      <li>
-                        <a href="https://www.tiktok.com/@podostepcelaya"><i class="fab fa-tiktok"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-        </section>
-    </section>
-
-
-    <footer class="p-4 color-hueso sm:p-6 dark:bg-gray-800">
+    <footer class="footer  md:mt-0 lg:mt-0 p-4 sm:p-6 dark:bg-gray-800">
         <div class="mx-auto max-w-screen-xl">
             <div class="md:flex md:justify-between">
-                <div class="mb-6 md:mb-0">
+                <div class="flex justify-center mb-3 md:mb-0 lg:block md:hidden">
                     <a href="#" class="flex items-center">
-                        <img src="./images/icono-sin-fondo.png" class="mr-3 h-8" alt="podo-step Logo" />
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Podo-Step</span>
+                        <img src="./images/icono-sin-fondo-nombre.png" class="mr-3 h-48" alt="podo-step Logo" />
                     </a>
                 </div>
                 <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Servicios</h2>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Podologia</h2>
                         <ul class="text-gray-600 dark:text-gray-400">
-                            <li class="mb-4">
-                                <p>Corte correto de uñas</p>
+                            <li  class="mb-4">
+                                <p data-open="modal-visita" class="pointer hover:none">¿Cuando visitar al podologo?</p>
                             </li>
                             <li  class="mb-4">
-                                <a href="#" class="hover:underline">Deslaminación de callos</a>
+                                <p data-open="modal-quiropodia" class="pointer hover:none">¿Quiropodia?</p>
                             </li>
                             <li  class="mb-4">
-                                <a href="#" class="hover:underline">Limpieza de canales ungueales</a>
+                                <p data-open="modal-onicomicosis" class="pointer hover:none">Onicomicosis</p>
                             </li>
                             <li  class="mb-4">
-                                <a href="#" class="hover:underline">Onicomicosis</a>
+                                <p data-open="modal-onicocriptosis" class="pointer hover:none">Onicocriptosis</p>
                             </li>
                             <li  class="mb-4">
-                                <a href="#" class="hover:underline">Onicocriptosis</a>
-                            </li>
-                            <li  class="mb-4">
-                                <a href="#" class="hover:underline">Onicogrifosis</a>
+                                <p data-open="modal-onicogrifosis" class="pointer hover:none">Onicogrifosis</p>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Precios</h2>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Contacto</h2>
                         <ul class="text-gray-600 dark:text-gray-400">
                             <li class="mb-4">
-                                <a href="#" class="hover:underline ">$ 300</a>
+                                <a href="#" class="hover:underline ">461 179 45 20</a>
                             </li>
                             <li>
-                                <a href="#" class="hover:underline">Discord</a>
+                                <a href="#" class="hover:underline">Podo-Step</a>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal</h2>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Nosotros</h2>
                         <ul class="text-gray-600 dark:text-gray-400">
                             <li class="mb-4">
-                                <a href="#" class="hover:underline">Privacy Policy</a>
+                                <a href="#" class="hover:underline">Politica de privacidad</a>
                             </li>
                             <li>
-                                <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                                <a href="#" class="hover:underline">Instituto Americano</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-            <div class="sm:flex sm:items-center sm:justify-between">
+
+            <hr class="my-6 mt-16 border-gray-50 sm:mx-auto dark:border-gray-700 lg:my-8 md:my-8 lg:mt-24" />
+
+            <div class="md:flex md:items-center md:justify-between">
                 <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="#" class="hover:underline">Podo-Step™</a>. All Rights Reserved.
                 </span>
-                <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                <div class="flex justify-center mt-6 mb-1 space-x-6 md:justify-center md:mt-0">
+
                     <a href="https://www.facebook.com/profile.php?id=61566464470909&mibextid=ZbWKwL" class="text-gray-500 hover:text-blue-500 dark:hover:text-white">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
@@ -423,9 +692,309 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> 
 
 
+    
+
+    <section id="modals">
+    
+        <div id="modal-visita" data-animation="slideInOutLeft" tabindex="-1" aria-hidden="true" class="modal md:w-screen">
+
+            <div class="modal-dialog p-4 w-full max-w-2xl max-h-full">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                        ¿Cuando visitar al podólogo?
+                    </h3>
+                    <button aria-label="close modal" type="button" data-close class="close-modal text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="modal-visita">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5 space-y-4">
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        Visitar al podólogo es importante para mantener la salud de tus pies. Aquí tienes algunas recomendaciones sobre cuándo deberías considerar una visita
+                    </p>
+
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        <ol class="space-y-10">
+                            <li class="flex">
+                                <svg class="me-2 mt-2 flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                                </svg>
+                                <p>
+                                    <span class="font-semibold  dark:text-white">Dolor o molestias persistentes:</span>
+                                    Si experimentas dolor en los pies, tobillos o rodillas que no desaparece, es una señal de que algo podría estar mal.
+                                </p>
+                            </li>
+                            <li class="flex">
+                                <svg class="w-3.5 h-3.5 me-2 mt-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                </svg>
+                                <p>
+                                    <span class="font-semibold  dark:text-white">Lesiones:</span>
+                                    Si sufres de lesiones frecuentes en los pies o tobillos, un podólogo puede ayudarte a identificar y tratar la causa subyacente
+                                </p>
+                            </li>
+                            <li class="flex">
+                                <svg class="w-3.5 h-3.5 me-2 mt-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                </svg>
+                                <p>
+                                    <span class="font-semibold  dark:text-white">Problemas estructurales:</span>
+                                    Condiciones como pies planos, pies cavos, dedos en garra o juanetes requieren seguimiento y tratamiento especializado.
+                                </p>
+                            </li>
+                            <li class="flex">
+                                <svg class="w-3.5 h-3.5 me-2 mt-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                </svg>
+                                <p>
+                                    <span class="font-semibold  dark:text-white">Callos y durezas:</span>
+                                    Si tienes callos o durezas que te causan molestias, un podólogo puede tratarlos de manera adecuada.
+                                </p>
+                            </li>
+                            <li class="flex">
+                                <svg class="w-3.5 h-3.5 me-2 mt-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                </svg>
+                                <p>
+                                    <span class="font-semibold  dark:text-white">Personas mayores:</span>
+                                    En la tercera edad, es común que aparezcan problemas en los pies debido al uso prolongado de calzado inadecuado o a condiciones como el aplanamiento del pie.
+                                </p>
+                            </li>
+                            <li class="flex">
+                                <svg class="w-3.5 h-3.5 me-2 mt-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                </svg>
+                                <p>
+                                    <span class="font-semibold  dark:text-white">Revisiones preventivas:</span>
+                                    Incluso si no tienes problemas evidentes, se recomienda hacer una visita preventiva al podólogo al menos una vez al año para detectar cualquier problema potencial antes de que se convierta en algo más grave.
+                                </p>
+                            </li>
+
+                        </ol>
+                        
+
+
+                    </p>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <button data-modal-hide type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
+                    <button data-modal-hide type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="modal-quiropodia" data-animation="slideInOutLeft" tabindex="-1" aria-hidden="true" class="modal md:w-screen">
+
+            <div class="modal-dialog p-4 w-full max-w-2xl max-h-full">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                        Quiropodia
+                    </h3>
+                    <button id="onClose" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="modal-quiropodia">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5 space-y-4">
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        La quiropodia es un tratamiento podológico que se enfoca en el cuidado y mantenimiento de los pies
+                    </p>
+
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        Este tratamiento incluye la eliminación de:
+                    </p>
+                    
+                     
+
+
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        <ol class="space-y-10">
+                            <li class="flex">
+                                <svg class="me-2 mt-2 flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                                </svg>
+                                <p>
+                                    <span class="font-semibold  dark:text-white">Durezas</span>
+                                </p>
+                            </li>
+                            <li class="flex">
+                                <svg class="w-3.5 h-3.5 me-2 mt-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                </svg>
+                                <p>
+                                    <span class="font-semibold  dark:text-white">Callosidades</span>
+                                </p>
+                            </li>
+                            <li class="flex">
+                                <svg class="w-3.5 h-3.5 me-2 mt-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                </svg>
+                                <p>
+                                    <span class="font-semibold  dark:text-white">Tratamiento de alteraciones en las uñas</span>
+                                </p>
+                            </li>
+                            
+
+                        </ol>
+                        
+
+
+                    </p>
+
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        Su objetivo principal es prevenir y tratar afecciones que puedan causar molestias o dolores, así como evitar que pequeñas lesiones se agraven con el tiempo.
+                    </p>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <button data-modal-hide type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
+                    <button data-modal-hide type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
+                </div>
+
+            </div>
+
+        </div>
+        
+        
+        <div id="modal2" data-animation="slideInOutLeft" tabindex="-1" aria-hidden="true" class="modal max-h-full">
+
+            <div class="modal-dialog p-4 w-full max-w-2xl max-h-full">
+
+                
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                        Terms of Service
+                    </h3>
+                    <button type="button" aria-label="close modal" data-modal-hide class="close-modal text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5 space-y-4">
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        With less than a month to go before the European Union enacts new consumer privacy laws for its citizens, companies around the world are updating their terms of service agreements to comply.
+                    </p>
+                    <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                        The European Union’s General Data Protection Regulation (G.D.P.R.) goes into effect on May 25 and is meant to ensure a common set of data rights in the European Union. It requires organizations to notify users as soon as possible of high-risk data breaches that could personally affect them.
+                    </p>
+                </div>
+                <!-- Modal footer -->
+                <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                    <button data-modal-hide type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">I accept</button>
+                    <button data-modal-hide type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Decline</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        
+
+
+
+
+
+
+
+        <div id="modal-quiropodias" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full ">
+            <div class="relative p-4 w-full max-w-2xl max-h-full md:max-w-full md:w-9/12 ">
+                <!-- Modal content -->
+                <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                    <!-- Modal header -->
+                    <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                            Quiropodia
+                        </h3>
+                        <button id="onClose" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="modal-quiropodia">
+                            <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                            </svg>
+                            <span class="sr-only">Close modal</span>
+                        </button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="p-4 md:p-5 space-y-4">
+                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                            La quiropodia es un tratamiento podológico que se enfoca en el cuidado y mantenimiento de los pies
+                        </p>
+
+                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                            Este tratamiento incluye la eliminación de:
+                        </p>
+                        
+                         
+
+
+                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                            <ol class="space-y-10">
+                                <li class="flex">
+                                    <svg class="me-2 mt-2 flex-shrink-0 w-3.5 h-3.5 text-green-500 dark:text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                                    </svg>
+                                    <p>
+                                        <span class="font-semibold  dark:text-white">Durezas</span>
+                                    </p>
+                                </li>
+                                <li class="flex">
+                                    <svg class="w-3.5 h-3.5 me-2 mt-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                    </svg>
+                                    <p>
+                                        <span class="font-semibold  dark:text-white">Callosidades</span>
+                                    </p>
+                                </li>
+                                <li class="flex">
+                                    <svg class="w-3.5 h-3.5 me-2 mt-2 text-green-500 dark:text-green-400 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                    </svg>
+                                    <p>
+                                        <span class="font-semibold  dark:text-white">Tratamiento de alteraciones en las uñas</span>
+                                    </p>
+                                </li>
+                                
+
+                            </ol>
+                            
+
+
+                        </p>
+
+                        <p class="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                            Su objetivo principal es prevenir y tratar afecciones que puedan causar molestias o dolores, así como evitar que pequeñas lesiones se agraven con el tiempo.
+                        </p>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="flex items-end p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                        <button id="onAcept" data-modal-hide="modal-quiropodia" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+    </section>
+
+ 
 
     <script src="./programacion.js"></script>
 </body>
