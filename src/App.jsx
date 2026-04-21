@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { HashRouter as Router, Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion'
+
 
 import isotipo from './assets/isotipo.svg'
 
@@ -10,8 +12,56 @@ import Contacto from './pages/ContactoPage';
 import Agendar from './pages/AgendarPage';
 import ComingSoon from './pages/ComingSoonPage';
 
+const PageWrapper = ({ children }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 10 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -10 }}
+    transition={{ duration: 0.4, ease: "easeInOut" }}
+  >
+    {children}
+  </motion.div>
+);
+
+const AnimatedRoutes = () => {
+  const location = useLocation();
+
+  return (
+    // mode="wait" asegura que la página actual termine de salir antes de que entre la nueva
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/contacto" element={
+          <PageWrapper>
+            <Contacto />
+          </PageWrapper>
+        } />
+        <Route path="/agendar" element={
+          <PageWrapper>
+            <Agendar />
+          </PageWrapper>
+        } />
+        <Route path="/" element={
+          <PageWrapper>
+            <ComingSoon />
+          </PageWrapper>
+        } />
+      </Routes>
+    </AnimatePresence>
+  );
+};
 
 function App() {
+  return (
+    <Router>
+      <main className="scroll-container">
+        <AnimatedRoutes />
+      </main>
+    </Router>
+  )
+}
+
+
+function Appi() {
   // const [loading, setLoading] = useState(true)
 
   return (

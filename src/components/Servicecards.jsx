@@ -1,18 +1,21 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 import { ArrowUpRight } from "lucide-react";
 
 const ServiceCards = () => {
   const navigate = useNavigate();
   const services = [
-    { title: "Uña encarnada", price: "$600", active: true },
+    { title: "Uña encarnada", price: "$550", active: true },
     { title: "Quiropodia", price: "$350", active: false },
-    { title: "Hongo-Onicomicosis", price: "$500", active: false },
-    { title: "Curaciones", price: "$55", active: true },
-    { title: "Ver mas", price: "$55", active: false },
+    { title: "Hongo-Onicomicosis", price: "$550", active: false },
+    { title: "Curaciones", price: "$550", active: true },
+    // { title: "Ver mas", price: "$550", active: false },
   ];
   
   const handleServiceClick = (service) => {
+   
+    
     navigate("/agendar", {
       state: { serviceName: service.title, price: service.price },
     });
@@ -70,7 +73,7 @@ const ServiceCards = () => {
           </div>
         ))}
         <div className="relative group p-8 rounded-[40px] transition-all duration-300 cursor-pointer h-44 flex flex-col justify-between bg-white text-gray-800 border border-gray-100 shadow-sm hover:shadow-md">
-          Ver mas
+          Estamos trabajando para ti
         </div>
       </div>
     </div>

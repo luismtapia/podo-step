@@ -39,6 +39,8 @@ import TimePicker from "../components/TimePicker";
 import ServiceCards from "../components/Servicecards";
 import TimePickerOld from "../components/TimePickerOld";
 
+import { socialLinks } from "../data/data";
+
 // Datos
 const direccion = "Flamenco 217, Col Álamos, Celaya, Gto.";
 const nombre = "Julieta Robles";
@@ -180,7 +182,7 @@ const ActionButtons = ({ onOpenBooking }) => {
     },
     {
       Icon: FaWhatsapp,
-      link: "https://wa.me/524611794520",
+      link: `https://wa.me/524611794520?text=${encodeURIComponent("Buenas tardes, me gustaría agendar una cita.")}`,
     },
     {
       Icon: FaFacebookMessenger,
@@ -268,27 +270,50 @@ const Schedule = ({ title, children }) => (
   </div>
 );
 
-const SocialMedia = ({ color }) => (
+// const SocialMedia = ({ color }) => (
+//   <div className="flex justify-center gap-6 pb-16 text-white">
+//     {[
+//       { icon: <FaInstagram />, link: "https://instagram.com/celayapodostep" },
+//       {
+//         icon: <FaFacebookF />,
+//         link: "https://facebook.com/podostepcelaya",
+//       },
+//       { icon: <FaYoutube />, link: "https://www.youtube.com/@Podo-StepCelaya" },
+//       { icon: <FaTiktok />, link: "https://www.tiktok.com/@podostepcelaya" },
+//     ].map((social, i) => (
+//       <a
+//         key={i}
+//         href={social.link}
+//         target="_blank"
+//         rel="noopener noreferrer"
+//         className="w-12 h-12 flex items-center justify-center bg-white/5 rounded-full text-xl hover:bg-brand-cotton hover:text-white hover:scale-110 transition-all duration-300"
+//       >
+//         {social.icon}
+//       </a>
+//     ))}
+//   </div>
+// );
+
+const SocialMedia = () => (
   <div className="flex justify-center gap-6 pb-16 text-white">
-    {[
-      { icon: <FaInstagram />, link: "https://instagram.com/celayapodostep" },
-      {
-        icon: <FaFacebookF />,
-        link: "https://facebook.com/podostepcelaya",
-      },
-      { icon: <FaYoutube />, link: "https://www.youtube.com/@Podo-StepCelaya" },
-      { icon: <FaTiktok />, link: "https://www.tiktok.com/@podostepcelaya" },
-    ].map((social, i) => (
-      <a
-        key={i}
-        href={social.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-12 h-12 flex items-center justify-center bg-white/5 rounded-full text-xl hover:bg-brand-cotton hover:text-white hover:scale-110 transition-all duration-300"
-      >
-        {social.icon}
-      </a>
-    ))}
+    {socialLinks.map((social) => {
+      // Extraemos el icono y lo renombramos con Mayúscula
+      const Icon = social.icon; 
+      
+      return (
+        <a
+          key={social.id}
+          href={social.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-12 h-12 flex items-center justify-center bg-white/5 rounded-full text-xl 
+                     hover:bg-brand-cotton hover:text-white hover:scale-110 
+                     transition-all duration-300"
+        >
+          <Icon /> {/* Lo renderizamos aquí */}
+        </a>
+      );
+    })}
   </div>
 );
 
@@ -319,7 +344,7 @@ const BottomSheet = ({ isOpen, onClose, children }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/60 z-[999] backdrop-blur-sm"
+            className="fixed inset-0 bg-blue/90 z-[999] backdrop-blur-sm"
           />
 
           {/* Panel Deslizable */}
@@ -479,7 +504,7 @@ const DoctorBookingProfile = () => {
       {/* Uso del BottomSheet */}
       <BottomSheet isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <div className="flex justify-between px-2 py-8">
-          <div>
+          <div className="flex items-center gap-2">
             <CalendarClock
               size={18}
               className="text-sky-500"
@@ -490,7 +515,7 @@ const DoctorBookingProfile = () => {
             </h2>
           </div>
 
-          <Search />
+          {/* <Search /> */}
         </div>
 
         <ServiceCards />
