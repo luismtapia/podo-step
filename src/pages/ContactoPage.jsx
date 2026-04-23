@@ -237,19 +237,31 @@ const StatCard = ({ icon: Icon, value, label, onClick }) => (
   </div>
 );
 
-const StatsBlock = () => (
-  <div className="w-full bg-white/90 rounded-[24px] p-5 shadow-sm border border-white/50 mb-8">
-    <div className="grid grid-cols-2 divide-x divide-slate-100">
-      <StatCard icon={CalendarClock} value="2 años" label="Experiencia" />
-      <StatCard
-        icon={FaMapMarkerAlt}
-        value="Clínica Álamos"
-        label="Flamenco # 217, Col Álamos"
-        onClick={handleMapClick}
-      />
+const StatsBlock = () => {
+  const anioInicio = 2023;
+  const anioActual = new Date().getFullYear();
+  const experiencia = anioActual - anioInicio;
+
+  const labelExperiencia = `${experiencia} ${experiencia === 1 ? "año" : "años"}`;
+
+  return (
+    <div className="w-full bg-white/90 rounded-[24px] p-5 shadow-sm border border-white/50 mb-8">
+      <div className="grid grid-cols-2 divide-x divide-slate-100">
+        <StatCard
+          icon={CalendarClock}
+          value={labelExperiencia}
+          label="Experiencia"
+        />
+        <StatCard
+          icon={FaMapMarkerAlt}
+          value="Clínica Álamos"
+          label="Flamenco # 217, Col Álamos"
+          onClick={handleMapClick}
+        />
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Schedule = ({ title, children }) => (
   <div className="w-full bg-white/90 rounded-[32px] p-5 shadow-sm border border-white/50 mb-8">
@@ -298,8 +310,8 @@ const SocialMedia = () => (
   <div className="flex justify-center gap-6 pb-16 text-white">
     {socialLinks.map((social) => {
       // Extraemos el icono y lo renombramos con Mayúscula
-      const Icon = social.icon; 
-      
+      const Icon = social.icon;
+
       return (
         <a
           key={social.id}
@@ -353,18 +365,42 @@ const BottomSheet = ({ isOpen, onClose, children }) => {
             animate={{ y: 0 }}
             exit={{ y: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            // Agregamos h-[90vh] para que ocupe casi toda la pantalla
-            className="fixed bottom-0 left-0 right-0 bg-white rounded-t-[2.5rem] z-[1000] p-4 shadow-2xl h-[80vh] overflow-y-auto"
+            className="fixed bottom-0 left-0 right-0 bg-white rounded-t-[2rem] z-[1000] p-4 shadow-2xl h-[80vh] flex flex-col overflow-hidden"
           >
-            {/* Indicador visual para "arrastrar" / Cerrar */}
-            <div className="w-16 h-1.5 bg-slate-200 rounded-full mx-auto mb-6" />
+            {/* --- HEADER FIJO (No hace scroll) --- */}
+            <div className="absolute right-4 top-3">
+              <button
+                onClick={onClose}
+                className="bg-slate-100 p-2 rounded-full text-slate-500 hover:bg-slate-200 transition-colors shadow-sm active:scale-95 cursor-pointer"
+              >
+                <X size={20} strokeWidth={3} />
+              </button>
+            </div>
 
-            <div className="max-w-md mx-auto h-full">{children}</div>
+            <div className="flex justify-between px-2 py-6">
+              <div className="flex items-center gap-2">
+                <CalendarClock
+                  size={18}
+                  className="text-sky-500"
+                  strokeWidth={2.5}
+                />
+                <h2 className="text-lg font-bold text-brand-navy">
+                  Como podemos ayudarte
+                </h2>
+              </div>
+            </div>
+
+            {/* --- ÁREA DE CONTENIDO (Única parte con SCROLL) --- */}
+            <div className="flex-1 overflow-y-auto px-4 pb-10">
+              <div className="max-w-md md:max-w-7xl mx-auto h-full">
+                {children}
+              </div>
+            </div>
           </motion.div>
         </>
       )}
     </AnimatePresence>,
-    document.body, // Esto lo envía al final del body
+    document.body,
   );
 };
 
@@ -372,16 +408,16 @@ const FooterContacto = () => (
   <footer className="bg-brand-navy pt-24 rounded-lg text-white flex flex-col justify-between z-60 relative">
     <SocialMedia color={"text-white"} />
 
-    <div className="w-full flex-grow md:px-12">
+    <div className="w-full flex-grow py-3 md:px-12">
       {/* Contenedor de los grupos de texto */}
-      <div className="flex flex-col md:flex-row md:justify-between items-center md:items-start gap-y-6 w-full mb-4">
+      <div className="flex flex-col md:flex-row md:justify-between items-center md:items-start gap-y-10 w-full mb-4">
         {/* Grupo 1: PODOSTEP CELAYA */}
         <motion.div {...fadeInUp} className="text-center md:text-left">
           <p className="text-[10px] uppercase tracking-[0.4em] text-white/80 font-medium">
             PODOSTEP CELAYA
           </p>
           <p className="text-[10px] uppercase tracking-[0.4em] text-white/30 font-medium">
-            © 2026 Derechos reservados
+            © {new Date().getFullYear()} Derechos reservados
           </p>
         </motion.div>
 
@@ -467,7 +503,7 @@ const DoctorBookingProfile = () => {
                 <div className="flex justify-center items-center gap-8 md:gap-96 w-full pt-12 ">
                   <StatCard
                     icon={Clock}
-                    value="09:00 a 19:00 hrs"
+                    value="09:00 a 19:00"
                     label="Lunes a Viernes"
                   />
                   <StatCard icon={Clock} value="09:00 a 14:00" label="Sábado" />
@@ -487,7 +523,7 @@ const DoctorBookingProfile = () => {
                 initial={{ scale: 0.8, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8, type: "spring" }}
-                className="flex px-12 py-5 justify-center items-center"
+                className="flex px-24 py-4 justify-center items-center"
               >
                 <img
                   src={imagotipo}
@@ -503,21 +539,6 @@ const DoctorBookingProfile = () => {
 
       {/* Uso del BottomSheet */}
       <BottomSheet isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
-        <div className="flex justify-between px-2 py-8">
-          <div className="flex items-center gap-2">
-            <CalendarClock
-              size={18}
-              className="text-sky-500"
-              strokeWidth={2.5}
-            />
-            <h2 className="text-lg font-bold text-brand-navy">
-              Como podemos ayudarte
-            </h2>
-          </div>
-
-          {/* <Search /> */}
-        </div>
-
         <ServiceCards />
       </BottomSheet>
     </div>

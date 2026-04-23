@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import TimePicker from "../components/TimePicker";
 import { motion, AnimatePresence } from "framer-motion";
-import { Info } from "lucide-react";
+import {
+  Info,
+  ChevronLeft as PrevIcon,
+  ChevronRight as NextIcon,
+} from "lucide-react";
 
 import BackButton from "../components/BackButton";
 
@@ -40,9 +45,29 @@ const InfoTooltip = ({ text }) => {
   );
 };
 
+const CustomContainer = ({ title, children }) => (
+  <div className="w-full bg-white/90 rounded-[32px] p-5 shadow-sm border border-white/50 mb-8">
+    <div className="flex items-center justify-between mb-6 px-1">
+      <h2 className="text-lg font-bold text-[#1E3A4C]">{title}</h2>
+      <div className="flex items-center gap-4">
+        <PrevIcon size={16} className="text-slate-400 cursor-pointer" />
+        <span className="text-sm font-bold text-[#1E3A4C]">Lun-Viernes</span>
+        <NextIcon size={16} className="text-slate-400 cursor-pointer" />
+      </div>
+    </div>
+    {children}
+  </div>
+);
+
 const AgendarPage = () => {
+  const location = useLocation();
+  const { serviceName, price } = location.state || {
+    serviceName: "Servicio",
+    price: "",
+  };
+
   const [selectedHour, setSelectedHour] = useState(9);
-  const [selectedDay, setSelectedDay] = useState("Miércoles");
+  const [selectedDay, setSelectedDay] = useState("");
 
   const [nombre, setNombre] = useState("");
   const [telefono, setTelefono] = useState("");
@@ -51,17 +76,17 @@ const AgendarPage = () => {
 
   const handleSolicitarCita = () => {
     if (!nombre || !telefono) {
-    setError(true);
-    // Se oculta automáticamente después de 3 segundos
-    setTimeout(() => setError(false), 3000);
-    return;
-  }
+      setError(true);
+      // Se oculta automáticamente después de 3 segundos
+      setTimeout(() => setError(false), 3000);
+      return;
+    }
 
     const horaFormateada =
       selectedHour > 12 ? `${selectedHour - 12} PM` : `${selectedHour} AM`;
 
     // Ejemplo: Abrir WhatsApp con los datos
-    const mensaje = `Hola, mi nombre es ${nombre}. Me gustaría solicitar una cita para el día ${selectedDay} a las ${horaFormateada}. Mi número de contacto es ${telefono}.`;
+    const mensaje = `Hola, mi nombre es ${nombre}. Me gustaría solicitar una cita de *${serviceName}* para el día ${selectedDay} a las ${horaFormateada}. Mi número de contacto es ${telefono}.`;
     window.open(
       `https://wa.me/524611794520?text=${encodeURIComponent(mensaje)}`,
       "_blank",
@@ -70,52 +95,96 @@ const AgendarPage = () => {
 
   return (
     <div className="relative min-h-screen">
-      <BackButton />
+      <header className="fixed top-0 left-0 w-full p-4 flex items-center justify-between z-[100] pointer-events-none">
+        <BackButton />
+
+        <div className="pointer-events-auto bg-white/80 backdrop-blur-lg px-4 py-2 rounded-2xl border border-white/40 shadow-sm">
+          <p className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">
+            Servicio
+          </p>
+          <p className="text-slate-800 font-bold text-sm leading-none tracking-wide">
+            ~ {price}
+          </p>
+        </div>
+      </header>
+
       {/* Toast de Alerta */}
-    <AnimatePresence>
-      {error && (
-        <motion.div
-          initial={{ opacity: 0, y: -20, x: "-50%" }}
-          animate={{ opacity: 1, y: 20, x: "-50%" }}
-          exit={{ opacity: 0, y: -20, x: "-50%" }}
-          className="fixed top-0 left-1/2 z-[110] w-[90%] max-w-md"
-        >
-          <div className="bg-white/80 backdrop-blur-xl border border-red-100 shadow-2xl shadow-red-500/10 px-6 py-4 rounded-2xl flex items-center gap-4">
-            <div className="w-10 h-10 bg-red-500/10 rounded-full flex items-center justify-center text-red-500">
-              <Info size={20} />
+      <AnimatePresence>
+        {error && (
+          <motion.div
+            initial={{ opacity: 0, y: -20, x: "-50%" }}
+            animate={{ opacity: 1, y: 20, x: "-50%" }}
+            exit={{ opacity: 0, y: -20, x: "-50%" }}
+            className="fixed top-0 left-1/2 z-[110] w-[90%] max-w-md"
+          >
+            <div className="bg-white/80 backdrop-blur-xl border border-red-100 shadow-2xl shadow-red-500/10 px-6 py-4 rounded-2xl flex items-center gap-4">
+              <div className="w-10 h-10 bg-red-500/10 rounded-full flex items-center justify-center text-red-500">
+                <Info size={20} />
+              </div>
+              <div className="flex-1">
+                <p className="text-slate-800 font-bold text-sm">Faltan datos</p>
+                <p className="text-slate-500 text-xs">
+                  Por favor escribe tu nombre y teléfono.
+                </p>
+              </div>
+              <button
+                onClick={() => setError(false)}
+                className="text-slate-400 hover:text-slate-600 transition-colors"
+              >
+                <svg
+                  size={18}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  className="w-5 h-5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
+                </svg>
+              </button>
             </div>
-            <div className="flex-1">
-              <p className="text-slate-800 font-bold text-sm">Faltan datos</p>
-              <p className="text-slate-500 text-xs">Por favor escribe tu nombre y teléfono.</p>
-            </div>
-            <button 
-              onClick={() => setError(false)}
-              className="text-slate-400 hover:text-slate-600 transition-colors"
-            >
-              <svg size={18} fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-5 h-5"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-          </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
+      <div className="m-16 flex justify-center">
+        <p className="text-slate-800 font-bold text-lg leading-none">
+          {serviceName}
+        </p>
+      </div>
 
-      
+      <div className="pt-2 pb-10 p-3 mb-6">
+        <CustomContainer title={"Seleccionar Horario"}>
+          <TimePicker
+            selectedDay={selectedDay}
+            setSelectedDay={setSelectedDay}
+            selectedHour={selectedHour}
+            setSelectedHour={setSelectedHour}
+          />
+        </CustomContainer>
+      </div>
 
-      <div className="py-4">
-        <TimePicker
-          selectedDay={selectedDay}
-          setSelectedDay={setSelectedDay}
-          selectedHour={selectedHour}
-          setSelectedHour={setSelectedHour}
-        />
+      <div className="p-4 mb-6">
+        <div className="w-full bg-white/90 rounded-[24px] shadow-sm border border-white/50">
+          <TimePicker
+            selectedDay={selectedDay}
+            setSelectedDay={setSelectedDay}
+            selectedHour={selectedHour}
+            setSelectedHour={setSelectedHour}
+          />
+        </div>
       </div>
 
       <div className="text-center px-6 py-8">
-        <h2 className="text-2xl font-bold text-slate-800 mb-2">Cita Manual</h2>
-        <p className="text-slate-500 mb-6">
-          Completa tus datos para agendar Nos comunicaremos contigo a la
-          brevedad
+        <h2 className="text-2xl font-bold text-slate-800 mb-2">
+          Completa tus datos
+        </h2>
+        <p className="text-slate-500 mb-8">
+          Nos comunicaremos contigo a la brevedad
         </p>
 
         {/* --- FORMULARIO DE CONTACTO --- */}

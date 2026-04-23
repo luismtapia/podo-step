@@ -12,10 +12,10 @@ const ServiceCards = () => {
     { title: "Curaciones", price: "$550", active: true },
     // { title: "Ver mas", price: "$550", active: false },
   ];
-  
+
   const handleServiceClick = (service) => {
-   
-    
+    // alert(service.title);
+
     navigate("/agendar", {
       state: { serviceName: service.title, price: service.price },
     });
@@ -47,7 +47,7 @@ const ServiceCards = () => {
             <div className="flex justify-between items-end">
               <div>
                 <p className="text-3xl font-bold mb-1">
-                  <span className="text-lg font-normal opacity-70">~</span>
+                  <span className="text-2xl font-normal opacity-70 tracking-wide">~ </span>
                   {service.price}
                 </p>
                 <p
@@ -55,7 +55,7 @@ const ServiceCards = () => {
                     service.active ? "text-teal-100" : "text-slate-500"
                   }`}
                 >
-                  Precio aprox.
+                  Precio apróx.
                 </p>
               </div>
 
@@ -72,7 +72,7 @@ const ServiceCards = () => {
             </div>
           </div>
         ))}
-        <div className="relative group p-8 rounded-[40px] transition-all duration-300 cursor-pointer h-44 flex flex-col justify-between bg-white text-gray-800 border border-gray-100 shadow-sm hover:shadow-md">
+        <div className="relative group p-8 rounded-[40px] transition-all duration-300 cursor-pointer flex flex-col justify-between bg-white text-gray-800 border border-gray-100 shadow-sm hover:shadow-md">
           Estamos trabajando para ti
         </div>
       </div>
